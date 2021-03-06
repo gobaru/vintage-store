@@ -1,0 +1,30 @@
+<%= form_with model: @shop, local: true do |f|%>
+
+<div class="error-message">
+    <%= render 'shared/error_messages', model: f.object %>
+</div>
+
+  <div class="field">
+    <%= f.label :shop_name, "ショップの名称" %><br />
+    <%= f.text_field :shop_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bland, "ブランド名" %><br />
+    <%= f.text_area :bland, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shop_detail, "ショップ詳細" %><br />
+    <%= f.text_area :shop_detail, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "商品の画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>

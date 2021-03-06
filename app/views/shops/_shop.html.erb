@@ -1,0 +1,10 @@
+<div class="card">
+  <%= link_to image_tag("商品の画像", class: :card__img ), root_path%>
+  <div class="card__body">
+    <%= link_to "ショップの名称", root_path, class: :card__title%>
+    <p class="card__summary">
+      <%= "ブランド名" %>
+    </p>
+    <%= link_to "by ショップの投稿者名", root_path, class: :card__user %>
+  </div>
+</div>
